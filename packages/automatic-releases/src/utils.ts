@@ -79,7 +79,7 @@ const getFormattedChangelogEntry = (parsedCommit: ParsedCommits): string => {
 
   const url = parsedCommit.extra.commit.html_url;
   const sha = getShortSHA(parsedCommit.extra.commit.sha);
-  const author = JSON.stringify(parsedCommit.extra.commit.commit.author); //.name
+  const author = parsedCommit.extra.commit.commit.author.name;
 
   let prString = '';
   prString = parsedCommit.extra.pullRequests.reduce((acc, pr) => {
