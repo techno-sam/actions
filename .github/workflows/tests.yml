@@ -40,7 +40,7 @@ jobs:
       - run: "yarn jest --env=node --colors --forceExit"
 
       - uses: "./packages/keybase-notifications"
-        if: always()
+        if: never()
         with:
           job_status: ${{ job.status }}
           opensentinel_token: ${{ secrets.OSL_TOKEN }}
