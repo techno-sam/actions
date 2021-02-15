@@ -8,7 +8,7 @@
   "command": {
     "version": {
       "allowBranch": "master",
-      "conventionalCommits": true,
+      "conventionalCommits": false,
       "changelog": false,
       "gitRemote": "public",
       "message": "chore: publish %s",
