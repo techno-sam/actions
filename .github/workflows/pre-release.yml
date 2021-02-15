@@ -53,6 +53,6 @@ jobs:
       # marvinpinto/action-inject-ssm-secrets
       - name: "Automatically mirror release artifacts"
         env:
-          GITHUB_SUPER_TOKEN: ${{ secrets.GITHUB_TOKEN }} # was ${{ secrets.GITHUB_SUPER_TOKEN }}
+          GITHUB_SUPER_TOKEN: ${{ secrets.MIRRORING_TOKEN }} # was ${{ secrets.GITHUB_SUPER_TOKEN }}
         run: |
           ./scripts/mirror-actions.sh "$AUTOMATIC_RELEASES_TAG"
